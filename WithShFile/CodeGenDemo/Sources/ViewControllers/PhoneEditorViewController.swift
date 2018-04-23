@@ -41,11 +41,17 @@ class PhoneEditorViewController: UIViewController {
     rollingImageViews.forEach { iv in
       // FIXME: SwiftGen xcassets - Asset.…
       iv.animationImages = [
-        UIImage(named: "Fruits/Exotic/Banana")!,
-        UIImage(named: "Fruits/Exotic/Mango")!,
-        UIImage(named: "Fruits/Round/Apple")!,
-        UIImage(named: "Fruits/Round/Apricot")!,
-        UIImage(named: "Fruits/Round/Double/Cherry")!,
+//        UIImage(named: "Fruits/Exotic/Banana")!,
+//        UIImage(named: "Fruits/Exotic/Mango")!,
+//        UIImage(named: "Fruits/Round/Apple")!,
+//        UIImage(named: "Fruits/Round/Apricot")!,
+//        UIImage(named: "Fruits/Round/Double/Cherry")!,
+        UIImage(asset: Asset.Fruits.Exotic.banana),
+        UIImage(asset: Asset.Fruits.Exotic.mango),
+//        UIImage(asset: Asset.Fruits.Round.Red.apple),
+        UIImage(asset: Asset.Fruits.Round.apricot),
+//        UIImage(asset: Asset.Fruits.Round.Red.Double.cherry),
+        UIImage(asset: Asset.Fruits.Round.Red.ball)
       ]
       iv.animationDuration = 0.05 + Double(arc4random_uniform(UInt32(20))) / 20.0
       iv.isHidden = false

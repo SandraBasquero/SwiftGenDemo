@@ -59,6 +59,7 @@ internal enum Asset {
       internal static let apricot = ImageAsset(name: "Fruits/Round/Apricot")
       internal enum Red {
         internal static let apple = ImageAsset(name: "Fruits/Round/Apple")
+        internal static let ball = ImageAsset(name: "Fruits/Round/Ball")
         internal enum Double {
           internal static let cherry = ImageAsset(name: "Fruits/Round/Double/Cherry")
         }
@@ -77,6 +78,7 @@ internal enum Asset {
     Fruits.Exotic.mango,
     Fruits.Round.apricot,
     Fruits.Round.Red.apple,
+    Fruits.Round.Red.ball,
     Fruits.Round.Red.Double.cherry,
     Fruits.Round.Red.tomato,
   ]

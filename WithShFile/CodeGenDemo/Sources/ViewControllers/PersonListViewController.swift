@@ -68,7 +68,8 @@ class PersonListViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     // FIXME: SwiftGen storyboards - StoryboardScene.PersonRecord
-    let vc = UIStoryboard(name: "PersonRecord", bundle: nil).instantiateInitialViewController() as! PersonRecordViewController
+//    let vc = UIStoryboard(name: "PersonRecord", bundle: nil).instantiateInitialViewController() as! PersonRecordViewController
+    let vc = UIStoryboard(name: StoryboardScene.PersonRecord.storyboardName, bundle: nil).instantiateInitialViewController() as! PersonRecordViewController
     vc.personRef = dataSource[indexPath.row]
     self.navigationController?.pushViewController(vc, animated: true)
   }
@@ -93,10 +94,10 @@ class PersonListViewController: UITableViewController {
                                   preferredStyle: .alert)
     
     // here we have a bad hard-coded key too!
-    alert.addAction(UIAlertAction(title: NSLocalizedString("PersonList.dupes.ok", comment: ""),
-                                  style: .default, handler: nil))
-//    alert.addAction(UIAlertAction(title: L10n.Personlist.Dupes.button,
+//    alert.addAction(UIAlertAction(title: NSLocalizedString("PersonList.dupes.ok", comment: ""),
 //                                  style: .default, handler: nil))
+    alert.addAction(UIAlertAction(title: L10n.Personlist.Dupes.button,
+                                  style: .default, handler: nil))
     self.present(alert, animated: true, completion: nil)
   }
 }

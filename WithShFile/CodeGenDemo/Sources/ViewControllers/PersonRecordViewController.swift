@@ -62,7 +62,8 @@ class PersonRecordViewController: UITableViewController {
       prompt(person.address[propertyIndex: row]) { self.personRef.object.address[propertyIndex: row] = $0 }
     case 2:
       // FIXME: SwiftGen storyboards - StoryboardScene.PersonRecord
-      let phoneEditor = UIStoryboard(name: "PersonRecord", bundle: nil).instantiateViewController(withIdentifier: "PhoneEditor") as! PhoneEditorViewController
+//      let phoneEditor = UIStoryboard(name: "PersonRecord", bundle: nil).instantiateViewController(withIdentifier: "PhoneEditor") as! PhoneEditorViewController
+        let phoneEditor = UIStoryboard(name: StoryboardScene.PersonRecord.storyboardName, bundle: nil).instantiateViewController(withIdentifier: "PhoneEditor") as! PhoneEditorViewController
       phoneEditor.phone = person.phones[row]
       phoneEditor.onDismiss = { [weak self] newPhone in
         self?.personRef.object.phones[row] = newPhone
