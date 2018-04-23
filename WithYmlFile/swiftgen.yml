@@ -1,0 +1,8 @@
+strings:
+  paths: CodeGenDemo/Resources/Base.lproj/Localizable.strings
+  templateName: structured-swift3
+  output: CodeGenDemo/Generated/StringsGen.swift
+xcassets:
+  paths: CodeGenDemo/Resources/Assets.xcassets
+  templateName: swift3
+  output: CodeGenDemo/Generated/AssetsGen.swift
